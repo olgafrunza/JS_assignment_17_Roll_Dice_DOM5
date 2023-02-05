@@ -22,8 +22,7 @@ let totalScoreP1 = 0;
 let totalScoreP2 = 0;
 
 function handleRollDice() {
-  // 5.99
-  const diceNumber = Math.floor(Math.random() * 6) + 1; // 0 1 2 3 4 5
+  const diceNumber = Math.floor(Math.random() * 6) + 1;
   console.log(diceNumber);
   diceElm.classList.remove("hidden");
   diceElm.src = `./images/dice-${diceNumber}.png`;
@@ -35,8 +34,6 @@ function handleRollDice() {
       currentScoreP1Elm.textContent = 0;
       currentScoreP1 = 0;
       activePlayer = 2;
-      //   sectionP1.classList.remove('player--active');
-      //   sectionP2.classList.add('player--active');
     } else {
       currentScoreP2Elm.textContent = 0;
       currentScoreP2 = 0;
@@ -77,7 +74,6 @@ function handleHold() {
       btnHold.removeEventListener("click", handleHold);
       btnRollDice.removeEventListener("click", handleRollDice);
     } else {
-      totalScoreP2 += currentScoreP2;
       currentScoreP2 = 0;
       currentScoreP2Elm.textContent = 0;
       totalScoreP2Elm.textContent = totalScoreP2;
